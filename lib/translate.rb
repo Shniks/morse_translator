@@ -13,7 +13,6 @@ class Translate
   end
 
   def from_file(file_name)
-    # binding.pry
     input_text = File.read(file_name)
     eng_to_morse(input_text)
   end

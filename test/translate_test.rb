@@ -2,7 +2,6 @@ require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/translate'
-require 'pry'
 
 class TranslateTest < Minitest::Test
 
@@ -63,7 +62,7 @@ class TranslateTest < Minitest::Test
 
   def test_if_it_can_read_from_file
     translator = Translate.new
-    result = translator.from_file("input.txt")
+    result = translator.from_file("./lib/input.txt")
 
     assert_equal ".. .--- ..-. .- ..-....-...", result
   end
