@@ -1,5 +1,4 @@
 require './lib/dictionary'
-require 'pry'
 
 class Translate
 
