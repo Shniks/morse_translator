@@ -61,6 +61,11 @@ class TranslateTest < Minitest::Test
     assert_equal "-......-.. .-.-.. ...-- ..........--....", result
   end
 
+  def test_method_morse_to_english_with_two_words
+    translator = Translate.new
+    result = translator.morse_to_eng(".... . .-.. .-.. ---  .-- --- .-. .-.. -..")
 
+    assert_equal "hello world", result
+  end
 
 end
