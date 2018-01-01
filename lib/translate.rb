@@ -12,13 +12,10 @@ class Translate
     morse.join
   end
 
-  def eng_to_morse(word)
-    morse = []
-    letters = word.split("")
-    letters.each do |letter|
-      morse << Dictionary.new.dictionary[letter.downcase]
-    end
-    morse.join
+  def from_file(file_name)
+    # binding.pry
+    input_text = File.read(file_name)
+    eng_to_morse(input_text)
   end
 
   def morse_to_eng(morse)

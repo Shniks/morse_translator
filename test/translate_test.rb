@@ -61,6 +61,13 @@ class TranslateTest < Minitest::Test
     assert_equal "-......-.. .-.-.. ...-- ..........--....", result
   end
 
+  def test_if_it_can_read_from_file
+    translator = Translate.new
+    result = translator.from_file("input.txt")
+
+    assert_equal ".. .--- ..-. .- ..-....-...", result
+  end
+
   def test_method_morse_to_english_with_two_words
     translator = Translate.new
     result = translator.morse_to_eng(".... . .-.. .-.. ---  .-- --- .-. .-.. -..")
